@@ -1,0 +1,252 @@
+@import './var';
+@import './reset';
+
+
+// 按钮
+$btn-base-bd: #ced3d9;
+$btn-base-bg: #f5f7fa;
+$btn-base-hover-bg: #e6ecf2;
+$btn-main-color: #e64545;
+$btn-main-hover-color: #d92121;
+$btn-aux-color: #1470cc;
+$btn-aux-hover-color: #1369bf;
+$btn-disabled-color: #b3b3b3;
+$btn-disabled-bg: #edf0f2;
+@mixin btn {
+    text-decoration: none;
+    outline: none;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    text-align: center;
+    color: #222;
+    border: solid 1px $btn-base-bd;
+    background-color: $btn-base-bg;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
+        color: #222;
+        background-color: $btn-base-hover-bg;
+    }
+    .micon,.ob-icon {
+        margin-right: 5px;
+        vertical-align: -10%;
+    }
+}
+@mixin btn-main {
+    color: #fff;
+    border: solid 1px $btn-main-color;
+    background-color: $btn-main-color;
+    &:hover {
+        color: #fff;
+        border: solid 1px $btn-main-hover-color;
+        background-color: $btn-main-hover-color;
+    }
+}
+@mixin btn-aux {
+    color: #fff;
+    border: solid 1px $btn-aux-color;
+    background-color: $btn-aux-color;
+    &:hover {
+        color: #fff;
+        border: solid 1px $btn-aux-hover-color;
+        background-color: $btn-aux-hover-color;
+    }
+}
+@mixin btn-disabled {
+    color: $btn-disabled-color;
+    border: solid 1px $btn-base-bd;
+    background-color: $btn-disabled-bg;
+    cursor: not-allowed;
+}
+
+
+.btn {
+    @include btn;
+}
+
+.btn-main {
+    @include btn-main;
+}
+.btn-aux {
+    @include btn-aux;
+}
+.btn-disabled,
+.btn-disabled:hover,
+.btn[disabled],
+.btn[disabled]:hover {
+    @include btn-disabled;
+}
+
+
+
+$border-grey-light: #ced3d9;
+$border-grey-dark: #7a8a99;
+
+.m-tip {
+    display: none;
+    position: absolute;
+    padding: 10px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #555;
+    background: #fff;
+    border: 1px solid $border-grey-light;
+    box-shadow: 2px 2px 3px rgba(0, 33, 66, .1);
+
+    .tip-con {
+        .tip-para {
+            margin: 0 0 10px 0;
+
+            &:last-child,
+            &.last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &.icon-tip {
+        box-shadow: none;
+        padding: 3px 10px;
+        border: none;
+
+        .arrow {
+            border: 6px dashed transparent;
+        }
+
+        &.tip-black {
+            background: #222;
+            color: #fff;
+        }
+
+        &.arrow-top {
+            .arrow {
+                border-bottom: 6px solid #222;
+                left: 50%;
+                top: -11px;
+                margin-left: -6px;
+            }
+        }
+
+        &.arrow-bottom {
+            .arrow {
+                border-top: 6px solid #222;
+                left: 50%;
+                bottom: -11px;
+                margin-left: -6px;
+            }
+        }
+
+        &.arrow-left {
+            .arrow {
+                border-right: 6px solid #222;
+                top: 50%;
+                ;
+                left: -11px;
+                margin-top: -6px;
+            }
+        }
+
+        &.arrow-right {
+            .arrow {
+                border-left: 6px solid #222;
+                top: 50%;
+                ;
+                right: -11px;
+                margin-top: -6px;
+            }
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        zoom: 1;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 8px dashed transparent;
+    }
+
+    &.arrow-top {
+        .arrow-out {
+            border-bottom: 8px solid $border-grey-light;
+            left: 10px;
+            top: -16px;
+        }
+
+        .arrow-in {
+            border-bottom: 8px solid #fff;
+            margin: -7px 0 0 -8px;
+        }
+    }
+
+    &.arrow-bottom {
+        .arrow-out {
+            border-top: 8px solid $border-grey-light;
+            left: 10px;
+            bottom: -16px;
+        }
+
+        .arrow-in {
+            border-top: 8px solid #fff;
+            margin: -9px 0 0 -8px;
+        }
+    }
+
+    &.arrow-left {
+        .arrow-out {
+            border-right: 8px solid $border-grey-light;
+            top: 10px;
+            left: -16px;
+        }
+
+        .arrow-in {
+            border-right: 8px solid #fff;
+            margin: -8px 0 0 -7px;
+            ;
+        }
+    }
+
+    &.arrow-right {
+        .arrow-out {
+            border-left: 8px solid $border-grey-light;
+            top: 10px;
+            right: -16px;
+        }
+
+        .arrow-in {
+            border-left: 8px solid #fff;
+            margin: -8px 0 0 -9px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.feedback-block {
+    clear: left;
+    .error {
+        margin-top: 5px;
+        color: #e64545;
+        display: inline-block;
+      }
+      
+    .warning {
+        margin-top: 5px;
+        color: #ff7733;
+        display: inline-block;
+      }
+  }
+  

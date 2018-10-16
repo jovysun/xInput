@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/*
+ * aid brush 颜色最浅 笔刷越大颜色越深
+ * [mini, tiny, small, medium, large, big, huge, massive]
+ */
+/*
+ * extend color
+ * Roman Numbers
+ * i: 1, ii: 2, iii: 3, iv: 4, v: 5, vi: 6, vii: 7, viii: 8, ix: 9, x: 10
+ */
+/*
+*@module: CSS-reset
+*@Author: CaoJiarui 2016.06.14
+*@Update: 
+*/
+html {
+  color: #222;
+  background: #fff;
+  font-size: 12px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, group, menu, nav, section {
+  margin: 0;
+  padding: 0; }
+
+/* for html5 tag */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+body, button, input, select, textarea {
+  font-family: "Roboto", Arial, "Microsoft YaHei", sans-serif;
+  font-size: inherit;
+  line-height: 1.5; }
+
+input, select, textarea {
+  vertical-align: middle;
+  color: inherit; }
+
+button, input {
+  *overflow: visible;
+  line-height: normal;
+  -webkit-appearance: none; }
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #888 !important; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #888 !important; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #888 !important; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #888 !important; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  text-align: inherit; }
+
+fieldset, img {
+  border: 0; }
+
+iframe {
+  display: block; }
+
+blockquote {
+  margin: 1em 4em 1em 2em;
+  padding: 0.6em 1em;
+  background: #f1f1f1; }
+
+blockquote blockquote {
+  padding: 0 0 0 1em;
+  margin-left: 2em;
+  border-left: 0.4em solid #ddd; }
+
+acronym, abbr {
+  border-bottom: 1px dotted;
+  font-variant: normal; }
+
+abbr {
+  cursor: help; }
+
+del {
+  text-decoration: line-through; }
+
+address, caption, cite, code, den, em, th, var {
+  font-style: normal;
+  font-weight: 500; }
+
+ul, ol {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+q:before, q:after {
+  content: ''; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* link color */
+a {
+  color: #1470CC;
+  text-decoration: none; }
+
+a:hover {
+  color: #E64545;
+  text-decoration: none; }
+
+ins, a {
+  text-decoration: none; }
+
+small {
+  font-size: 11px;
+  color: #888; }
+
+:focus {
+  outline: none; }
+
+/* standard color */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0; }
+
+.btn {
+  text-decoration: none;
+  outline: none;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  text-align: center;
+  color: #222;
+  border: solid 1px #ced3d9;
+  background-color: #f5f7fa;
+  padding: 5px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-sizing: border-box; }
+  .btn:hover {
+    color: #222;
+    background-color: #e6ecf2; }
+  .btn .micon, .btn .ob-icon {
+    margin-right: 5px;
+    vertical-align: -10%; }
+
+.btn-main {
+  color: #fff;
+  border: solid 1px #e64545;
+  background-color: #e64545; }
+  .btn-main:hover {
+    color: #fff;
+    border: solid 1px #d92121;
+    background-color: #d92121; }
+
+.btn-aux {
+  color: #fff;
+  border: solid 1px #1470cc;
+  background-color: #1470cc; }
+  .btn-aux:hover {
+    color: #fff;
+    border: solid 1px #1369bf;
+    background-color: #1369bf; }
+
+.btn-disabled,
+.btn-disabled:hover,
+.btn[disabled],
+.btn[disabled]:hover {
+  color: #b3b3b3;
+  border: solid 1px #ced3d9;
+  background-color: #edf0f2;
+  cursor: not-allowed; }
+
+.m-tip {
+  display: none;
+  position: absolute;
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #555;
+  background: #fff;
+  border: 1px solid #ced3d9;
+  box-shadow: 2px 2px 3px rgba(0, 33, 66, 0.1); }
+  .m-tip .tip-con .tip-para {
+    margin: 0 0 10px 0; }
+    .m-tip .tip-con .tip-para:last-child, .m-tip .tip-con .tip-para.last-child {
+      margin-bottom: 0; }
+  .m-tip.icon-tip {
+    box-shadow: none;
+    padding: 3px 10px;
+    border: none; }
+    .m-tip.icon-tip .arrow {
+      border: 6px dashed transparent; }
+    .m-tip.icon-tip.tip-black {
+      background: #222;
+      color: #fff; }
+    .m-tip.icon-tip.arrow-top .arrow {
+      border-bottom: 6px solid #222;
+      left: 50%;
+      top: -11px;
+      margin-left: -6px; }
+    .m-tip.icon-tip.arrow-bottom .arrow {
+      border-top: 6px solid #222;
+      left: 50%;
+      bottom: -11px;
+      margin-left: -6px; }
+    .m-tip.icon-tip.arrow-left .arrow {
+      border-right: 6px solid #222;
+      top: 50%;
+      left: -11px;
+      margin-top: -6px; }
+    .m-tip.icon-tip.arrow-right .arrow {
+      border-left: 6px solid #222;
+      top: 50%;
+      right: -11px;
+      margin-top: -6px; }
+  .m-tip .arrow {
+    position: absolute;
+    zoom: 1;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border: 8px dashed transparent; }
+  .m-tip.arrow-top .arrow-out {
+    border-bottom: 8px solid #ced3d9;
+    left: 10px;
+    top: -16px; }
+  .m-tip.arrow-top .arrow-in {
+    border-bottom: 8px solid #fff;
+    margin: -7px 0 0 -8px; }
+  .m-tip.arrow-bottom .arrow-out {
+    border-top: 8px solid #ced3d9;
+    left: 10px;
+    bottom: -16px; }
+  .m-tip.arrow-bottom .arrow-in {
+    border-top: 8px solid #fff;
+    margin: -9px 0 0 -8px; }
+  .m-tip.arrow-left .arrow-out {
+    border-right: 8px solid #ced3d9;
+    top: 10px;
+    left: -16px; }
+  .m-tip.arrow-left .arrow-in {
+    border-right: 8px solid #fff;
+    margin: -8px 0 0 -7px; }
+  .m-tip.arrow-right .arrow-out {
+    border-left: 8px solid #ced3d9;
+    top: 10px;
+    right: -16px; }
+  .m-tip.arrow-right .arrow-in {
+    border-left: 8px solid #fff;
+    margin: -8px 0 0 -9px; }
+
+.feedback-block {
+  clear: left; }
+  .feedback-block .error {
+    margin-top: 5px;
+    color: #e64545;
+    display: inline-block; }
+  .feedback-block .warning {
+    margin-top: 5px;
+    color: #ff7733;
+    display: inline-block; }
